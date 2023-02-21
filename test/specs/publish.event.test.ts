@@ -6,7 +6,7 @@ import DashboardPage from '../pageobjects/dashboard.page.js'
 import EventPage from '../pageobjects/event.page.js'
 
 describe('Create a new event', () => {
-    it('should pusblish and confirm an event', async () => {
+    it('should publish and confirm an event', async () => {
         await LoginPage.open()
         await LoginPage.login(loginData.email, loginData.password)
         await DashboardPage.clickCreateNewEventButton()
