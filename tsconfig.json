@@ -1,14 +1,15 @@
 {
     "compilerOptions": {
         "moduleResolution": "node",
-        // "allowSyntheticDefaultImports": true,
+        "allowSyntheticDefaultImports": true,
         "resolveJsonModule": true,
         "module": "ESNext",
         "types": [
             "node",
             "@wdio/globals/types",
             "expect-webdriverio",
-            "@wdio/mocha-framework"
+            "@wdio/mocha-framework",
+            "wdio-intercept-service"
         ],
         "target": "es2022",
     }

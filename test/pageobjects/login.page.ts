@@ -1,4 +1,5 @@
 import { ChainablePromiseElement } from 'webdriverio';
+import WebdriverAjax from 'wdio-intercept-service'
 
 import Page from './page.js';
 
@@ -17,6 +18,13 @@ class LoginPage extends Page {
     public open () {
         return super.open('panel');
     }
+
+    public async checkIfConnectionWasSuccessful () {
+        browser.setupInterceptor();
+        browser.pause(4000);
+        browser.expectRequest('GET', '/api/auth/authorize?return_url=https%3A%2F%2Fplus.interactio.com%2Fpanel&action=login', 302);
+    }
 }
 
 export default new LoginPage();
+

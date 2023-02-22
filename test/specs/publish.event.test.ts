@@ -9,6 +9,7 @@ describe('Create a new event', () => {
     it('should publish and confirm an event', async () => {
         await LoginPage.open()
         await LoginPage.login(loginData.email, loginData.password)
+        await LoginPage.checkIfConnectionWasSuccessful()
         await DashboardPage.clickCreateNewEventButton()
         await EventPage.fillInreateNewEventForm(eventData.name, eventData.address)
         await EventPage.clickPublishButton()
