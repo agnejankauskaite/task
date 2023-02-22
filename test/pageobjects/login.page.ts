@@ -21,7 +21,7 @@ class LoginPage extends Page {
 
     public async checkIfConnectionWasSuccessful () {
         browser.setupInterceptor();
-        browser.pause(4000);
+        browser.pause(6000);
         browser.expectRequest('GET', '/api/auth/authorize?return_url=https%3A%2F%2Fplus.interactio.com%2Fpanel&action=login', 302);
     }
 }

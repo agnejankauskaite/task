@@ -10,10 +10,9 @@ class EventPage extends Page {
     public get publishButton () { return $('button=Publish') }
     public get publishEventButton () { return $('button=Publish event') }
 
-    public async fillInreateNewEventForm (name: string, adress: string) {
+    public async fillInNewEventForm (name: string, adress: string) {
         await this.testEventCheckbox.waitForClickable()
         await this.testEventCheckbox.click()
-        await this.eventAdressInput.waitForClickable()
         await this.eventNameInput.setValue(name)
         await this.eventAdressInput.setValue(adress)
         await this.adressDropdownOption.click()

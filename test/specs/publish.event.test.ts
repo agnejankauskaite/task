@@ -11,7 +11,7 @@ describe('Create a new event', () => {
         await LoginPage.login(loginData.email, loginData.password)
         await LoginPage.checkIfConnectionWasSuccessful()
         await DashboardPage.clickCreateNewEventButton()
-        await EventPage.fillInreateNewEventForm(eventData.name, eventData.address)
+        await EventPage.fillInNewEventForm(eventData.name, eventData.address)
         await EventPage.clickPublishButton()
         await EventPage.clickPublishEventButton()
     })
